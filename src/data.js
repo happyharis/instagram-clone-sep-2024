@@ -12,7 +12,7 @@ export const PROFILE_DATA = {
     🤝🏻 Build real world projects
     💯 Free if you don’t land a tech job
     `,
-  link: "linktr.ee/joinsigma",
+  link: "https://linktr.ee/joinsigma",
   posts: [
     {
       image: "https://picsum.photos/id/123/500/500",
