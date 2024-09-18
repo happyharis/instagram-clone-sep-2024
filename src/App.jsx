@@ -1,5 +1,6 @@
 import { Col, Row } from 'react-bootstrap'
 import IconButton from './components/IconButton'
+import ProfileHeader from './components/ProfileHeader'
 
 export default function App() {
   return (
@@ -19,7 +20,9 @@ export default function App() {
         <IconButton className='bi bi-person-circle'></IconButton>
         <IconButton className='bi bi-list' isBottom></IconButton>
       </Col>
-      <Col sm={11}>Main</Col>
+      <Col sm={11}>
+        <ProfileHeader />
+      </Col>
     </Row>
   )
 }
