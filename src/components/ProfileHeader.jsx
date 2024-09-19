@@ -29,6 +29,7 @@ export default function ProfileHeader() {
       {/* Profile Description */}
       <Col md={9}>
         <span className="me-4" style={{ fontSize: '20px' }}>{name}</span>
+        <Button variant="primary me-2">Follow</Button>
         <Button variant="light me-2">Message</Button>
         <Button variant="light me-2">
           <i className="bi bi-person-plus"></i>
