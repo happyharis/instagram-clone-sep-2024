@@ -5,12 +5,13 @@ import { useDispatch, useSelector } from "react-redux"
 import { updatePost } from "../features/posts/postsSlice"
 
 export default function UpdatePostModal({ show, handleClose, postId }) {
+
   const { image, name } = useContext(ProfileContext)
   const dispatch = useDispatch()
 
-  const post = useSelector((state) => {
+  const post = useSelector((state) =>
     state.posts.find((post) => post.id === postId)
-  })
+  )
 
   const [imageUrl, setImageUrl] = useState('')
   const [description, setDescription] = useState('')
