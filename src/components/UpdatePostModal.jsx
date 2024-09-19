@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { ProfileContext } from "../App"
 import { Button, Col, Form, Image, Modal, Row } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
-import { createPost } from "../features/posts/postsSlice"
+import { updatePost } from "../features/posts/postsSlice"
 
 export default function UpdatePostModal({ show, handleClose, postId }) {
   const { image, name } = useContext(ProfileContext)
@@ -26,7 +26,7 @@ export default function UpdatePostModal({ show, handleClose, postId }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (imageUrl) { // if the image url is not empty
-      dispatch(createPost({ image: imageUrl, description }))
+      dispatch(updatePost({ id: postId, image: imageUrl, description }))
       setImageUrl('')
       setDescription('')
       handleClose()
@@ -46,7 +46,7 @@ export default function UpdatePostModal({ show, handleClose, postId }) {
   return (
     <Modal show={show} onHide={handleClose} size="lg">
       <Modal.Header>
-        <Modal.Title>Create new post</Modal.Title>
+        <Modal.Title>Edit post</Modal.Title>
       </Modal.Header>
 
       <Form onSubmit={handleSubmit}>
